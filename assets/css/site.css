@@ -144,4 +144,42 @@ footer {
     body {
         background-attachment: scroll;
     }
+
+   }
+      /* ---------------------------------
+   Scrapbook
+   --------------------------------- */
+
+/* ---------------------------------
+   Scrapbook
+   --------------------------------- */
+
+.scrapbook {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.scrapbook-item {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.scrapbook-item img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.scrapbook-item figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    font-style: italic;
 }
