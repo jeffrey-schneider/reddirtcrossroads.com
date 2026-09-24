@@ -1,0 +1,8 @@
+title: Red Dirt Crossroads
+url: "https://reddirtcrossroads.com"
+baseurl: ""
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
