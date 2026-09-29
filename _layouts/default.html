@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ page.title | default: site.title }}</title>
+
+    <style>
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 0 30px;
+            line-height: 1.6;
+            background-color: #f5f0e8;
+            color: #2d2926;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-top: 8px;
+        }
+
+        hr {
+            margin: 40px 0;
+        }
+
+        .status {
+            font-family: Arial, sans-serif;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Red Dirt Crossroads</h1>
+
+        <p class="tagline">
+            Stories from places where lives change direction.
+        </p>
+
+        <h2>
+            <a href="/books/stephanie-wilburn/">
+                Stephanie Wilburn/Hammond Series
+            </a>
+        </h2>
+    </header>
+
+    <hr>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <hr>
+
+    <footer>
+        <p class="status">
+            Red Dirt Crossroads &mdash; Site under construction
+        </p>
+    </footer>
+
+</body>
+</html>
