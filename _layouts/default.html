@@ -3,26 +3,45 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% if page.description %}
-<meta name="description" content="{{ page.description }}">
-{% endif %}
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<title>{{ page.title | default: site.title }} | Red Dirt Crossroads</title>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {% else %}
+    <meta name="description" content="{{ site.description }}">
+    {% endif %}
+
+    {% if page.title == site.title %}
+    <title>{{ site.title }}</title>
+    {% else %}
+    <title>{{ page.title }} | {{ site.title }}</title>
+    {% endif %}
+
     <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 
 <body>
 
     <header>
-        <h1>Red Dirt Crossroads</h1>
+        <h1>{{ site.title }}</h1>
+
+        <p class="tagline">
+            {{ site.description }}
+        </p>
 
         <nav aria-label="Main navigation">
             <a href="/">Home</a>
-            <a href="/books/stephanie-wilburn/">Stephanie Wilburn Series</a>
-            <a href="/books/stephanie-wilburn/scrapbook/">Scrapbook</a>
-            <a href="/about/">About</a>
+            <a href="/books/stephanie-wilburn/">
+                Stephanie Wilburn-Hammond Series
+            </a>
+            <a href="/books/stephanie-wilburn/scrapbook/">
+                Scrapbook
+            </a>
+            <a href="/about/">
+                About
+            </a>
         </nav>
     </header>
 
@@ -32,9 +51,10 @@
 
     <footer>
         <p>
-            &copy; 2026 Jeffrey Schneider. All rights reserved.
+            &copy; 2026 {{ site.author }}. All rights reserved.
         </p>
     </footer>
 
 </body>
+
 </html>
