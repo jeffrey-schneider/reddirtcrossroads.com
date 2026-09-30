@@ -17,7 +17,7 @@ body {
     font-family: Georgia, "Times New Roman", serif;
     line-height: 1.6;
 
-    color: #2d2926;
+    color: var(--rdc-ink);
 
     background-image: url("/assets/images/site/raychel-sanner-uk-unsplash.png");
     background-size: cover;
@@ -37,15 +37,18 @@ header {
     padding: 2rem;
 
     background-color: rgba(245, 240, 232, 0.88);
+    border: 1px solid rgba(212, 183, 122, 0.65);
 }
 
 h1 {
     margin: 0;
     font-size: 3rem;
+    color: var(--rdc-red-dirt);
 }
 
 h2 {
     margin-top: 0.5rem;
+    color: var(--rdc-deep-rust);
 }
 
 
@@ -61,13 +64,14 @@ nav a {
     display: inline-block;
     margin-right: 1.5rem;
 
-    color: #4a3325;
+    color: var(--rdc-deep-rust);
     text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover,
 nav a:focus {
+    color: var(--rdc-red-dirt);
     text-decoration: underline;
 }
 
@@ -82,6 +86,7 @@ main {
     padding: 2rem;
 
     background-color: rgba(245, 240, 232, 0.88);
+    border: 1px solid rgba(212, 183, 122, 0.65);
 }
 
 main p {
@@ -94,12 +99,12 @@ main p {
    --------------------------------- */
 
 a {
-    color: #6b3d24;
+    color: var(--rdc-red-dirt);
 }
 
 a:hover,
 a:focus {
-    color: #2d2926;
+    color: var(--rdc-deep-rust);
 }
 
 
@@ -144,11 +149,8 @@ footer {
     body {
         background-attachment: scroll;
     }
+}
 
-   }
-      /* ---------------------------------
-   Scrapbook
-   --------------------------------- */
 
 /* ---------------------------------
    Scrapbook
@@ -166,7 +168,9 @@ footer {
     margin: 0;
     padding: 1rem;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.75);
+
+    background-color: rgba(251, 247, 239, 0.88);
+    border-bottom: 3px solid var(--rdc-wheat);
 }
 
 .scrapbook-item img {
@@ -182,4 +186,21 @@ footer {
     margin-top: 0.75rem;
     font-size: 0.9rem;
     font-style: italic;
+    color: var(--rdc-sage);
+}
+
+
+/* ---------------------------------
+   Red Dirt Crossroads Color Palette
+   --------------------------------- */
+
+:root {
+    --rdc-paper:       #F5F0E8;
+    --rdc-ink:         #2D2926;
+
+    --rdc-red-dirt:    #9A4F32;
+    --rdc-deep-rust:   #713923;
+    --rdc-sage:        #68705A;
+    --rdc-wheat:       #D4B77A;
+    --rdc-cream:       #FBF7EF;
 }
